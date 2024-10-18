@@ -5,16 +5,22 @@
 <div>AI output: {json response}</div>
 <body>
     <script>
-      const url = 'http://127.0.0.1:5000/execute?command=Test';
-
-fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        console.log('Output:', data.output);
-        console.log('Error:', data.error);
-    })
-    .catch(error => console.error('Error:', error));
-
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('your-server-url')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.json(); // Adjust based on the expected response type
+                })
+                .then(data => {
+                    console.log(data); // Check the data received
+                    // Update your UI or do something with the data here
+                })
+                .catch(error => {
+                    console.error('There was a problem with your fetch operation:', error);
+                });
+        });
     </script>
 </body>
 </html>
