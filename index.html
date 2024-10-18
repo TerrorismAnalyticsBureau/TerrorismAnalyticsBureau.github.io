@@ -4,23 +4,16 @@
 
 <div>AI output: {json response}</div>
 <body>
+    <div id="output"></div> <!-- This is where you might display the fetched message -->
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://choice-mudfish-excited.ngrok-free.app/execute')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok ' + response.statusText);
-                    }
-                    return response.json(); // Adjust based on the expected response type
-                })
-                .then(data => {
-                    console.log(data); // Check the data received
-                    // Update your UI or do something with the data here
-                })
-                .catch(error => {
-                    console.error('There was a problem with your fetch operation:', error);
-                });
-        });
+        fetch('https://choice-mudfish-excited.ngrok-free.app/execute')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message); // Should log "Hello, world!"
+                document.getElementById('output').innerText = data.message; // Display the message on the page
+            })
+            .catch(error => console.error('Error fetching data:', error));
     </script>
 </body>
 </html>
