@@ -10,12 +10,22 @@
 
     <script>
         fetch('https://choice-mudfish-excited.ngrok-free.app/execute')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data.message); // Should log "Hello, world!"
-                document.getElementById('output').innerText = data.message; // Display the message on the page
-            })
-            .catch(error => console.error('Error fetching data:', error));
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data); // Should log: { output: "Hello, world!", error: "" }
+        if (data.output) {
+            // Update your HTML here with data.output
+            document.getElementById('output').innerText = data.output; // Replace with your actual element ID
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
     </script>
 </body>
 </html>
