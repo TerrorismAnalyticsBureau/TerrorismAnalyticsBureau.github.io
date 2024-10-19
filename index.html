@@ -18,8 +18,7 @@
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
-                    responseClone = response.clone();
-                    return response.text();
+                    return response.json();
                 })
                 .then(data => {
                     console.log(data); 
