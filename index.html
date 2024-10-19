@@ -11,7 +11,12 @@
     
 
     <script>
-            var responseClone;
+           const response = await fetch(url, {
+          headers:{
+            accept: 'application/json',
+            'User-agent': 'learning app',
+              }
+            });
         
             fetch('https://choice-mudfish-excited.ngrok-free.app/execute')
                 .then(response => {
@@ -24,12 +29,8 @@
                 .then(data => {
                     console.log(data); 
                     document.getElementById('output').innerText = data.output;
-                }), (rejectionReason => {
-                    console.log('Error parsing JSON from response:', rejectionReason, responseClone); // 4
-                    responseClone.text() // 5
-                }
+                })
                 .catch(error => {
-                    console.log('Received the following instead of valid JSON:', bodyText); // 6
                     console.error('Error:', error);
                     document.getElementById('output').innerText = 'Error fetching data';
                 });
