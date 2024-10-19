@@ -9,7 +9,6 @@
     
 
     <script>
-       document.addEventListener('DOMContentLoaded', function() {
             fetch('https://choice-mudfish-excited.ngrok-free.app/execute')
                 .then(response => {
                     if (!response.ok) {
@@ -25,7 +24,6 @@
                     console.error('Error:', error);
                     document.getElementById('output').innerText = 'Error fetching data';
                 });
-        });
     </script>
 </body>
 </html>
