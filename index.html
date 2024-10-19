@@ -13,7 +13,13 @@
     <script>
     
         
-            fetch('https://choice-mudfish-excited.ngrok-free.app/execute')
+            fetch('https://choice-mudfish-excited.ngrok-free.app/execute', {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json',
+        "ngrok-skip-browser-warning": "1",
+    }
+}))
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
