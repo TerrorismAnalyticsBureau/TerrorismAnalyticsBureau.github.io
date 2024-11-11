@@ -2,6 +2,7 @@
 layout: page
 title: Documentation
 permalink: /documentation/
+css: "custom.css"
 ---
 <div class="container" style ="flex-direction: column">
 <a href="pdf/SP-2-DataMining-AI-Design.pdf" class="item">Design Document</a>
