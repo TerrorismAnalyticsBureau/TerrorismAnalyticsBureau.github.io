@@ -3,7 +3,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      gap: 20px; /* Space between each image and name pair */
+      gap: 20px; 
     }
 
     .item {
@@ -13,13 +13,13 @@
     }
 
     .item img {
-      max-width: 150px; /* Adjust image size as needed */
+      max-width: 150px; 
       height: auto;
-      border-radius: 8px; /* Optional: rounds the image corners */
+      border-radius: 8px;
     }
 
     .item p {
       margin-top: 10px;
-      font-size: 16px; /* Adjust font size as needed */
+      font-size: 16px;
       text-align: center;
     }
