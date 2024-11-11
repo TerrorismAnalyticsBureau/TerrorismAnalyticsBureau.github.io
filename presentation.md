@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Video Presentation
-permalink: /video/
+title: Presentation
+permalink: /presentation/
 ---
 
 This is where the final presentation video will go
