@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Documentation
+title: Video Presentation
 permalink: /video/
 ---
 
