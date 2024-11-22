@@ -10,3 +10,27 @@ permalink: /demo/
   </div>
   
   <div>AI output: <div id="output"></div> </div>
+
+  <script>
+  fetch('https://choice-mudfish-excited.ngrok-free.app/execute', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'ngrok-skip-browser-warning': '1',
+    }
+  })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log(data);
+            document.getElementById('output').innerText = data.output;
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('output').innerText = 'Error fetching data';
+          });
+</script>
