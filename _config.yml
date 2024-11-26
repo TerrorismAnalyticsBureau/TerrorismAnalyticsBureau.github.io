@@ -16,7 +16,7 @@
 title: Terrorism Analytics Bureau
 email: brutusvelzy@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Terrorism analytics and insight on global crime and terrorism.
+  Insight on global crime and terrorism.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://terrorismanalyticsbureau.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
