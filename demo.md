@@ -12,7 +12,6 @@ permalink: /demo/
   fetch('https://choice-mudfish-excited.ngrok-free.app/execute', {
     method: 'GET',
     headers: {
-      'Content-Type': 'application/json',
       'ngrok-skip-browser-warning': '1',
     }
   })
@@ -20,11 +19,11 @@ permalink: /demo/
             if (!response.ok) {
               throw new Error('Network response was not ok');
             }
-            return response.json();
+            return response.text();
           })
           .then(data => {
             console.log(data);
-            document.getElementById('output').innerText = data.output;
+            document.getElementById('output').innerText = data;
           })
           .catch(error => {
             console.error('Error:', error);
