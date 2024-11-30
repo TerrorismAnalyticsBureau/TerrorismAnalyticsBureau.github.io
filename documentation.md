@@ -18,4 +18,6 @@ permalink: /documentation/
 <div class="container">
 <a href="https://terrorismanalyticsbureau.github.io/pdf/SP-2-DataMining-AI-STR" class="item">STR Document</a>
 </div>
-
+<div class="container">
+<a href="https://github.com/TerrorismAnalyticsBureau/TerrorismAnalyticsBureau.github.io/blob/main/pdf/SP-2-DataMining-AI-FinalReport.pdf" class="item">Final Report</a>
+</div>
