@@ -1,2 +1,2 @@
 # TerrorismAnalyticsBureau.github.io
-forontend for TAB
+frontend for TAB
